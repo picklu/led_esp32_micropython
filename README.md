@@ -6,4 +6,4 @@
 
 * The LED circuit ![Simple LED circuit with ESP32](/images/13.png)
 
-**Note:** A detailed description of the project is available in the [pdf](/Basic_Micropython_projects_with_D1 ESP8266_ESP32.pdf) file.
+**Note:** A detailed description of the project is available in the [pdf](/Basic_Micropython_projects_with_D1_ESP8266_ESP32.pdf) file.
