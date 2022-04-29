@@ -17,7 +17,7 @@ soc.listen(5)
 
 while True:
   conn, addr = soc.accept()
-  print(f'Got a connection from {addr}')
+  print('Got a connection from %s'% addr[0])
   request = conn.recv(1024)
   request = str(request)
   print('Content = %s' % request)
@@ -29,9 +29,9 @@ while True:
   if led_off == 6 and led.value():
     print('LED OFF')
     led.value(0)
-
+  page = web_page()
   conn.send('HTTP/1.1 200 OK\n')
   conn.send('Content-Type: text/html\n')
   conn.send('Connection: close\n\n')
-  conn.sendall(web_page())
+  conn.sendall(page)
   conn.close()

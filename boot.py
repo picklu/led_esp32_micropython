@@ -29,7 +29,8 @@ while not station.isconnected():
 print('Connection successful')
 print(station.ifconfig())
 
-led = Pin(2, Pin.OUT)
+led = Pin(4, Pin.OUT)
 
-with open("main.html") as f:
-      html = f.read() or "File not found!"
+with open("template.html") as f:
+  html = f.read()
+html = html or "The html file was not found!"
